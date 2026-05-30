@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'lobster';
+    src: url('../fonts/Lobster-Regular.ttf');
+}
+
+
+.body-home , .body-login{
+    background: url('../background/school.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.black-fill{
+    background: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+}
+
+#homeNav{
+    background: rgba(255, 255, 255, 0.3) !important;
+    color: white;
+}
+
+.home-screen{
+    margin-top: 120px;
+}
+
+.home-section h1{
+    font-size: 51px;
+    color: white;
+    font-family: 'lobster';
+}
+
+.home-section p{
+background: rgba(255, 255, 255, 0.3) !important;
+padding: 4px;
+border-radius: 4px;
+}
+
+#about{
+    height: 100vh;
+}
+
+#about .card-1{
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.3) !important;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+#about .card-1 h5{
+    font-family: 'lobster';
+    font-size: 35px;
+ 
+}
+
+
+#contact {
+    height: 100vh;
+}
+
+#contact .card-2{
+    max-width: 600px;
+        width: 90%;
+        background: rgba(255, 255, 255, 0.3) !important;
+        padding: 10px;
+        border-radius: 10px;
+}
+
+#contact h1{
+    text-align: center;
+    font-size: 35px;
+    font-family: 'lobster';
+}
+
+.body-login .login-section{
+    max-width: 600px;
+    width: 90%;
+    background: rgba(255, 255, 255, 0.3) !important;
+    padding: 10px;
+    border-radius: 10px;
+    
+
+}
+.body-login .login-section h1{
+    font-size: 65px;
+ 
+    
+}
+
+
+.w-400{
+    width: 400px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.n-table{
+    min-width: 600px;
+}
+.c-pointer{
+cursor: pointer;
+}
+
+.G-table {
+    min-width: 400px;
+    max-width: 800px;
+}

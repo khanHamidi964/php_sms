@@ -1,0 +1,342 @@
+    /* =====================================================
+   GLOBAL RESET
+===================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: #f4f6fb;
+    color: #111827;
+    overflow-x: hidden;
+}
+
+/* =====================================================
+   SIDEBAR (BLUE PROFESSIONAL THEME)
+===================================================== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 260px;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+   
+    background:black;
+
+    color: #fff;
+
+    box-shadow: 6px 0 30px rgba(0,0,0,0.25);
+
+    z-index: 1000;
+
+    overflow: hidden;
+}
+
+/* soft blue glow */
+.sidebar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at top left, rgba(59,130,246,0.25), transparent 60%);
+    pointer-events: none;
+}
+
+/* =====================================================
+   SIDEBAR HEADER
+===================================================== */
+.sidebar-header {
+    flex-shrink: 0;
+    text-align: center;
+    padding: 20px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    position: sticky;
+    top: 0;
+
+    background: inherit;
+    z-index: 2;
+}
+
+.sidebar-header img {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    object-fit: cover;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.sidebar-header h2 {
+    font-size: 15px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    color: #e5e7eb;
+}
+
+/* =====================================================
+   SIDEBAR MENU
+===================================================== */
+.sidebar-menu {
+    list-style: none;
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px 0;
+}
+
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 18px;
+    color: #cbd5e1;
+    text-decoration: none;
+
+    font-size: 14px;
+
+    border-left: 3px solid transparent;
+    transition: 0.25s ease;
+}
+
+.sidebar-menu a:hover {
+    background: rgba(255,255,255,0.06);
+    border-left: 3px solid #60a5fa;
+    color: #fff;
+    padding-left: 22px;
+}
+
+
+
+/* =====================================================
+   TOP HEADER (PREMIUM GRADIENT)
+===================================================== */
+.topbar {
+    position: fixed;
+    top: 0;
+    left: 260px;
+    right: 0;
+
+    height: 65px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 20px;
+
+    /* 🌈 PROFESSIONAL GRADIENT HEADER */
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 40%, #2563eb 100%);
+
+    color: #fff;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+
+    z-index: 1100;
+}
+
+/* subtle glow */
+.topbar::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at right, rgba(96,165,250,0.25), transparent 60%);
+    pointer-events: none;
+}
+
+/* =====================================================
+   USER BOX
+===================================================== */
+.user-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+    position: relative;
+
+    padding: 6px 10px;
+    border-radius: 12px;
+
+    transition: 0.25s;
+}
+
+.user-box:hover {
+    background: rgba(255,255,255,0.12);
+}
+
+.user-box img {
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+    border: 2px solid #93c5fd;
+
+    object-fit: cover;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.2;
+}
+
+.user-info span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.user-info small {
+    font-size: 11px;
+    color: #dbeafe;
+}
+
+/* =====================================================
+   DROPDOWN
+===================================================== */
+.user-dropdown {
+    position: absolute;
+    top: 60px;
+    right: 0;
+
+    width: 180px;
+
+    background: #ffffff;
+    border-radius: 12px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+
+    display: none;
+    flex-direction: column;
+
+    overflow: hidden;
+    animation: fadeIn 0.2s ease;
+}
+
+.user-dropdown a {
+    padding: 12px;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #111827;
+    font-size: 13px;
+}
+
+.user-dropdown a:hover {
+    background: #f3f4f6;
+}
+
+.user-dropdown .logout {
+    color: #ef4444;
+}
+
+.user-dropdown.show {
+    display: flex;
+}
+
+/* animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+.main-content {
+    margin-left: 260px;
+    padding: 85px 20px 20px 20px;
+}
+
+/* =====================================================
+   MOBILE RESPONSIVE
+===================================================== */
+@media (max-width: 768px) {
+
+    .sidebar {
+        left: -260px;
+    }
+
+    .sidebar.active {
+        left: 0;
+    }
+
+    .topbar {
+        left: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+/* =====================================================
+   TOGGLE BUTTON
+===================================================== */
+.sidebar-toggle {
+    display: none;
+    position: fixed;
+    top: 15px;
+    left: 15px;
+
+    background: #0f172a;
+    color: #fff;
+
+    padding: 10px;
+    border-radius: 10px;
+
+    z-index: 1200;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .sidebar-toggle {
+        display: block;
+    }
+}
+
+/* =====================================================
+   OVERLAY
+===================================================== */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(3px);
+
+    z-index: 999;
+}
+
+.sidebar-overlay.active {
+    display: block;
+}
+
+
+
+
+.sidebar-menu a.active {
+    background: linear-gradient(90deg, rgba(96,165,250,0.25), rgba(37,99,235,0.1));
+    border-left: 4px solid #60a5fa;
+    color: #ffffff;
+    font-weight: 600;
+    box-shadow: inset 0 0 10px rgba(96,165,250,0.15);
+}

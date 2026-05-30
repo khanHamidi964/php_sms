@@ -1,0 +1,452 @@
+/* =========================
+   ROOT DESIGN SYSTEM
+========================= */
+:root {
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e2e8f0;
+
+    --primary: #2563eb;
+    --danger: #ef4444;
+    --warning: #f59e0b;
+    --info: #06b6d4;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: "Segoe UI", system-ui, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* page width */
+.container {
+    max-width: 1250px;
+}
+
+/* =========================
+   TOP TOOLBAR (SEARCH + BUTTON)
+========================= */
+.shadow.p-2.mb-3 {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 14px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* search box */
+.input-group {
+    width: 320px;
+    max-width: 100%;
+}
+
+.input-group .form-control {
+    border: 1px solid var(--border);
+    border-radius: 8px 0 0 8px;
+    padding: 9px 10px;
+    font-size: 14px;
+}
+
+.input-group .form-control:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: none;
+}
+
+.input-group .btn {
+    border-radius: 0 8px 8px 0;
+    background: var(--primary);
+    border: none;
+}
+
+.input-group .btn:hover {
+    background: #1d4ed8;
+}
+
+/* add button */
+.btn-dark {
+    background: #0f172a;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 14px;
+    font-size: 14px;
+}
+
+.btn-dark:hover {
+    background: #020617;
+}
+
+/* =========================
+   ALERTS (CLEAN STYLE)
+========================= */
+.alert {
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+.alert-warning {
+    background: #fff7ed;
+    color: #9a3412;
+}
+
+.alert-info {
+    background: #f1f5f9;
+    color: #1e293b;
+}
+
+/* =========================
+   TABLE WRAPPER (VERY CLEAN CARD)
+========================= */
+.table-responsive {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+/* =========================
+   TABLE DESIGN (PRO LEVEL)
+========================= */
+.table {
+    margin: 0;
+    width: 100%;
+}
+
+/* header */
+.table thead {
+    background: #f1f5f9;
+}
+
+.table thead th {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted);
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+}
+
+/* rows */
+.table tbody td {
+    padding: 12px;
+    font-size: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    vertical-align: middle;
+    color: var(--text);
+}
+
+.table tbody tr:hover {
+    background: #f9fafb;
+}
+
+/* =========================
+   PROFILE IMAGE (CLEAN AVATAR)
+========================= */
+.img-thumbnail {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--border);
+}
+
+/* =========================
+   ACTION BUTTONS (MINIMAL ICON STYLE)
+========================= */
+.btn {
+    border-radius: 6px;
+    font-size: 13px;
+    padding: 5px 7px;
+    border: none;
+}
+
+/* edit */
+.btn-warning {
+    background: var(--warning);
+    color: #fff;
+}
+
+/* view */
+.btn-info {
+    background: var(--info);
+    color: #fff;
+}
+
+/* delete */
+.btn-danger {
+    background: var(--danger);
+    color: #fff;
+}
+
+/* subtle hover */
+.btn:hover {
+    filter: brightness(0.95);
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+#close-btn {
+    color: var(--danger);
+    font-weight: 600;
+}
+
+#close-btn:hover {
+    color: #b91c1c;
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+.alert-info {
+    text-align: center;
+    font-weight: 500;
+    border-radius: 10px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+
+    .shadow.p-2.mb-3 {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .input-group {
+        width: 100%;
+    }
+
+    .table thead th {
+        font-size: 11px;
+    }
+
+    .table tbody td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 12px;
+    }
+}
+
+
+
+/* =========================
+   GLOBAL STYLE
+========================= */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+/* =========================
+   MAIN CARD
+========================= */
+.card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+/* header row */
+.card h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* separator */
+hr {
+    border: none;
+    height: 1px;
+    background: #e5e7eb;
+}
+
+/* =========================
+   FORM LABELS
+========================= */
+.form-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 6px;
+}
+
+/* =========================
+   INPUT FIELDS
+========================= */
+.form-control {
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 9px 10px;
+    font-size: 14px;
+    transition: 0.2s;
+    background: #fff;
+}
+
+.form-control:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.12);
+    outline: none;
+}
+
+/* file input */
+input[type="file"].form-control {
+    padding: 7px;
+}
+
+/* =========================
+   INPUT GROUP (PASSWORD)
+========================= */
+.input-group .form-control {
+    border-radius: 8px 0 0 8px;
+}
+
+.input-group .btn {
+    border-radius: 0 8px 8px 0;
+    background: #111827;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+}
+
+.input-group .btn:hover {
+    background: #000;
+}
+
+/* =========================
+   CARD LAYOUT SPACING
+========================= */
+.card .row {
+    margin-top: 10px;
+}
+
+.col-md-3, .col-md-6 {
+    margin-bottom: 8px;
+}
+
+/* =========================
+   RADIO BUTTONS
+========================= */
+input[type="radio"] {
+    accent-color: #2563eb;
+    margin-right: 4px;
+}
+
+/* =========================
+   CHECKBOX SECTION (CLEAN GRID)
+========================= */
+.form-label + br + input[type="checkbox"] {
+    margin-right: 6px;
+}
+
+input[type="checkbox"] {
+    accent-color: #2563eb;
+    margin-right: 5px;
+    transform: scale(1.05);
+}
+
+/* make class & subject area cleaner */
+.col-md-6 .mb-3 {
+    background: #f9fafb;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #eef2f7;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+.btn-dark {
+    background: #111827;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+.btn-dark:hover {
+    background: #000;
+}
+
+/* submit button */
+button[name="submitBtn"] {
+    width: 120px;
+    font-weight: 600;
+}
+
+/* =========================
+   ALERT BOX
+========================= */
+.alert {
+    border-radius: 10px;
+    font-size: 14px;
+    border: 1px solid #e5e7eb;
+}
+
+/* warning alert */
+.alert-warning {
+    background: #fff7ed;
+    color: #9a3412;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+#close-btn {
+    font-weight: 600;
+    color: #dc2626;
+}
+
+#close-btn:hover {
+    color: #991b1b;
+}
+
+/* =========================
+   HEADER TOOL AREA
+========================= */
+.d-flex.justify-content-between {
+    align-items: center;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+
+    .card {
+        padding: 15px;
+    }
+
+    .col-md-3, .col-md-6 {
+        width: 100%;
+    }
+
+    .d-flex.justify-content-between {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    button[name="submitBtn"] {
+        width: 100%;
+    }
+}
+
+

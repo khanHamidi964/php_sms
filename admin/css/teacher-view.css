@@ -1,0 +1,203 @@
+/* =========================
+   GLOBAL STYLE
+========================= */
+:root {
+    --bg: #f6f8fc;
+    --card: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e5e7eb;
+    --primary: #2563eb;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* =========================
+   FULL WIDTH CONTAINER
+========================= */
+.container {
+    max-width: 100% !important;
+    padding: 20px;
+}
+
+/* =========================
+   MAIN CARD (FULL WIDTH)
+========================= */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+/* HEADER */
+.card h4 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* divider */
+hr {
+    border: none;
+    height: 1px;
+    background: var(--border);
+    margin: 12px 0 18px;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+.btn-dark {
+    background: #111827;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-size: 14px;
+}
+
+.btn-dark:hover {
+    background: #000;
+}
+
+/* =========================
+   MAIN LAYOUT ROW
+========================= */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* columns full control */
+.col-md-4 {
+    flex: 1;
+    min-width: 280px;
+}
+
+.col-md-4:nth-child(1) {
+    max-width: 260px;
+}
+
+/* =========================
+   PROFILE IMAGE (CLEAN + CENTERED)
+========================= */
+.img-thumbnail {
+    width: 100%;
+    max-width: 240px;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+    display: block;
+    margin: auto;
+}
+
+/* =========================
+   TABLE DESIGN (FULL WIDTH PROFESSIONAL)
+========================= */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+/* table container */
+.table-responsive {
+    width: 100%;
+}
+
+/* HEADER (if needed) */
+.table th {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--muted);
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    width: 30%;
+}
+
+/* DATA CELLS */
+.table td {
+    font-size: 14px;
+    padding: 12px;
+    border-bottom: 1px solid #f1f5f9;
+    color: var(--text);
+}
+
+/* ROW HOVER */
+.table tr:hover {
+    background: #f9fafb;
+}
+
+/* =========================
+   SUBJECTS / CLASSES LIST
+========================= */
+.table td {
+    word-break: break-word;
+}
+
+/* make subject/class columns clean inline */
+td {
+    line-height: 1.6;
+}
+
+/* =========================
+   RIGHT SECTION TABLE BOX
+========================= */
+.col-md-4 .table-responsive {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 10px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 992px) {
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col-md-4 {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .img-thumbnail {
+        max-width: 200px;
+        height: 200px;
+    }
+}
+
+/* =========================
+   MOBILE TABLE FIX
+========================= */
+@media (max-width: 768px) {
+
+    .card {
+        padding: 15px;
+    }
+
+    .table th {
+        width: 45%;
+        font-size: 12px;
+    }
+
+    .table td {
+        font-size: 13px;
+        padding: 10px;
+    }
+
+    .btn-dark {
+        width: 100%;
+    }
+}
