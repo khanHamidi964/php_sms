@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS  sms;
-CREATE DATABASE sms;
-USE sms;
+DROP DATABASE IF EXISTS  student_management_system;
+CREATE DATABASE student_management_system;
+USE student_management_system;
 
 --  CREATE THE ADMIN TABLE
 CREATE TABLE Admin(
